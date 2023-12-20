@@ -1,0 +1,9 @@
+# Files to ignore
+README-template.md
+README.md
+style-guide.md
+.prettierrc
+
+# Node modules
+node_modules
+design
