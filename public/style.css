@@ -425,7 +425,7 @@ svg {
   color: white;
 }
 
-@media (min-width: 499px) and (max-width: 960px) {
+@media (min-width: 700px) and (max-width: 960px) {
   /* Navbar Section */
   .navbar {
     padding: 1rem 2rem;
@@ -610,7 +610,45 @@ svg {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 699px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  button.navbar-toggler:hover {
+    background-color: var(--white);
+  }
+
+  .links-navbar,
+  .login-navbar {
+    background-color: var(--purple);
+    flex-direction: column;
+  }
+
+  .links-navbar {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding-top: 1rem;
+  }
+
+  .login-navbar {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-bottom: 1rem;
+  }
+
+  .login-navbar::before {
+    content: "";
+    width: 90%;
+    height: 1px;
+    background-color: var(--grey);
+  }
+
+  .navbar-custom .nav-link,
+  .navbar-custom .nav-link.active {
+    color: var(--white);
+  }
+
   /* Website info Section */
   .site-info,
   .adv-statistics-card,
@@ -733,11 +771,11 @@ svg {
   }
 
   .adv-statistics-card hr {
-    width: 200%;
+    width: 50rem;
     transform: rotate(90deg);
     border: 4px solid var(--blue);
     position: absolute;
-    bottom: 40rem;
+    bottom: 35rem;
   }
 
   .customizable {
