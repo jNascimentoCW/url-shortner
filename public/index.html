@@ -138,7 +138,7 @@
         <div class="inner-purple-section">
           <h2>Boost your links today</h2>
           <!-- button -->
-          <a href=""><button class="button button-purple-section">Get Started</button></a>
+          <a href="#site-info"><button class="button button-purple-section">Get Started</button></a>
         </div>
       </div>
     </div>
@@ -213,7 +213,7 @@
       <p>
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
-        <a href="#">Jhonatan Nascimento</a>
+        <a href="https://github.com/jNascimentoCW">Jhonatan Nascimento</a>
       </p>
     </div>
 
@@ -231,9 +231,11 @@
 
     <script>
       //Event listener to copy to clipboard the URL
+      const btn = document.querySelector(".copyURL");
       function buttonClicked(event) {
         event.preventDefault();
         navigator.clipboard.writeText(event.target.getAttribute("href"));
+        btn.textContent = "Copied!";
       }
     </script>
   </body>

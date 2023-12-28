@@ -192,14 +192,14 @@ svg {
 }
 
 .shorten-card form button {
-  font-size: 1rem;
+  font-size: 1.2rem;
   width: 17%;
 }
 
 .shorten-card form button,
 .shorten-card form input {
   border-radius: 15px;
-  padding: 1.3rem;
+  padding: 1.3rem 0.5rem;
 }
 
 .shorten-card form p {
@@ -265,6 +265,7 @@ svg {
 
 .shorten-site-card button {
   border-radius: var(--shorten-card-border);
+  padding: 0.5rem 1.5rem;
   margin-right: 1.3rem;
   right: 0;
 }
