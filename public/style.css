@@ -40,6 +40,11 @@ button:hover {
   background-color: var(--light-blue);
 }
 
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
 svg {
   color: var(--white);
 }
@@ -143,8 +148,10 @@ svg {
 }
 
 .shorten-card {
-  background-image: url("/public/images/bg-shorten-desktop.png");
+  background-image: url("/images/bg-shorten-desktop.png");
   background-color: var(--purple);
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: var(--shorten-card-border);
   padding: 5rem;
   position: relative;
@@ -185,7 +192,7 @@ svg {
 }
 
 .shorten-card form button {
-  font-size: 1.2rem;
+  font-size: 1rem;
   width: 17%;
 }
 
@@ -197,7 +204,7 @@ svg {
 
 .shorten-card form p {
   position: absolute;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 
 /*If the website is wrong  */
@@ -214,6 +221,7 @@ svg {
 }
 
 .shorten-card form.wrong p {
+  visibility: visible;
   color: var(--red);
   font-style: italic;
   font-weight: 600;
@@ -232,16 +240,18 @@ svg {
 
 .shorten-site-card {
   position: relative;
-  display: flex;
-  align-items: center;
+  display: none;
   background-color: var(--white);
   padding: 2rem;
   grid-column: span 3;
   font-size: 1rem;
-  /* visibility: hidden; */
+  margin-bottom: 1.5rem;
   width: 85%;
   border-radius: var(--shorten-card-border);
-  z-index: 0;
+}
+
+.show-card {
+  display: block;
 }
 
 .shorten-site-card p,
@@ -249,6 +259,8 @@ svg {
 .shorten-site-card button {
   margin: 0;
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .shorten-site-card button {
@@ -261,7 +273,6 @@ svg {
   cursor: pointer;
   color: var(--blue);
   font-weight: var(--font-weight-g);
-  text-decoration: none;
   right: 9rem;
 }
 
@@ -337,7 +348,7 @@ svg {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url("/public/images/bg-boost-desktop.png");
+  background-image: url("/images/bg-boost-desktop.png");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 7.5rem;
@@ -378,10 +389,6 @@ svg {
   font-weight: 700;
 }
 
-.footer a {
-  text-decoration: none;
-}
-
 .logo a {
   color: var(--white);
   font-weight: 800;
@@ -418,11 +425,6 @@ svg {
   background-color: var(--black);
   text-align: center;
   grid-column: span 5;
-}
-
-.attribution p a {
-  text-decoration: none;
-  color: white;
 }
 
 @media (min-width: 700px) and (max-width: 960px) {
@@ -474,8 +476,8 @@ svg {
   }
 
   .shorten-site-card {
+    font-size: 0.8rem;
     top: 6rem;
-    /* visibility: hidden; */
   }
 
   /* Website info Section */
@@ -584,7 +586,7 @@ svg {
   }
 
   .purple-section {
-    background-image: url("/public/images/bg-boost-mobile.png");
+    background-image: url("/images/bg-boost-mobile.png");
   }
 
   /*  */
@@ -697,7 +699,7 @@ svg {
   }
 
   .shorten-card {
-    background-image: url("/public/images/bg-shorten-mobile.png");
+    background-image: url("/images/bg-shorten-mobile.png");
     background-size: 100%;
     background-position: 5rem -3rem;
     padding: 6rem;
@@ -727,12 +729,36 @@ svg {
     color: var(--white);
     position: absolute;
     top: 3.8rem;
-    /* visibility: hidden; */
+
     font-size: 0.8rem;
   }
 
   .shorten-site-card {
+    width: 80%;
+
     grid-column: span 1;
+  }
+
+  .shorten-site-card p,
+  .shorten-site-card a,
+  .shorten-site-card button {
+    position: initial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    word-break: break-all;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .shorten-site-card p {
+    margin-bottom: 1.5rem;
+  }
+
+  .shorten-site-card button {
+    transform: translateY(50%);
+    width: 100%;
   }
 
   /*  */
@@ -784,7 +810,7 @@ svg {
 
   /*  */
   .purple-section {
-    background-image: url("/public/images/bg-boost-mobile.png");
+    background-image: url("/images/bg-boost-mobile.png");
   }
 
   /*  */
